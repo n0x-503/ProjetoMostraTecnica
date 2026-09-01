@@ -10,22 +10,5 @@
     { "type": "wokwi-led", "id": "led", "top": 150, "left": -100, "attrs": { "color": "red" } },
     { "type": "wokwi-resistor", "id": "resistor", "top": 220, "left": -100, "attrs": { "value": "220" } }
   ],
-  "connections": [
-    [ "esp:GND.1", "display:GND", "black", [ "v0" ] ],
-    [ "esp:3V3", "display:VCC", "red", [ "v0" ] ],
-    [ "esp:D22", "display:CLK", "yellow", [ "v0" ] ],
-    [ "esp:D23", "display:DIO", "orange", [ "v0" ] ],
-
-    [ "esp:GND.2", "sensor:GND", "black", [ "v0" ] ],
-    [ "esp:3V3", "sensor:VCC", "red", [ "v0" ] ],
-    [ "esp:D15", "sensor:SDA", "blue", [ "v0" ] ],
-
-    [ "esp:GND.2", "rele:GND", "black", [ "v0" ] ],
-    [ "esp:VIN", "rele:VCC", "red", [ "v0" ] ],
-    [ "esp:D4", "rele:IN", "purple", [ "v0" ] ],
-
-    [ "esp:D5", "led:Anode", "green", [ "v0" ] ],
-    [ "led:Cathode", "resistor:1", "black", [ "v0" ] ],
-    [ "resistor:2", "esp:GND.1", "black", [ "v0" ] ]
-  ]
+  "connections": []
 }
