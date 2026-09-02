@@ -58,7 +58,7 @@ void loop() {
   }
 
   if (SerialBT.available()) {
-    String data = SerialBT.readStringUntil('\n');
+    String data = SerialBT.readString();
     int separatorIndex = data.indexOf(',');
     if (separatorIndex != -1) {
       String tempStr = data.substring(0, separatorIndex);
@@ -74,8 +74,7 @@ void loop() {
     digitalWrite(Relay_Pin, LOW);
   }
 
-  // Alterna temperatura/umidade no display a cada 3 segundos,
-  // sem travar a leitura do Bluetooth (nada de delay(3000) aqui)
+
   if (millis() - ultimaTrocaDisplay >= 3000) {
     ultimaTrocaDisplay = millis();
     mostrandoTemperatura = !mostrandoTemperatura;
